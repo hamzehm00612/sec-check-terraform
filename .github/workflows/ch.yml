@@ -5,6 +5,7 @@ on:
     branches:
       - main
   pull_request:
+jobs:
   kics-job:
     runs-on: ubuntu-latest
     name: kics-action
