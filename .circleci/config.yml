@@ -1,0 +1,15 @@
+version: 2.1
+
+  orbs:
+    checkov: bridgecrew/checkov@x.y.z
+
+  jobs:
+    build:
+      executor: checkov/default
+      steps:
+        - checkout
+        - checkov/scan:
+            directory: '.'
+            soft-fail: true
+            output: "junitxml"
+            api-key: "6bridgecrew-9example-2api-key1-demo9"
